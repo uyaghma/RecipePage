@@ -1,0 +1,175 @@
+@font-face {
+    font-family: 'Outfit';
+    src: url("./assets/fonts/outfit/Outfit-VariableFont_wght.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "Young Serif";
+    src: url("./assets/fonts/young-serif/YoungSerif-Regular.ttf") format("truetype");
+}
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --rose-white: hsl(330, 100%, 98%);
+    --eggshell: hsl(30, 54%, 90%);
+    --light-grey: hsl(30, 18%, 87%);
+    --wenge-brown: hsl(30, 10%, 34%);
+    --dark-charcoal: hsl(24, 5%, 18%);
+    --nutmeg: hsl(14, 45%, 36%);
+    --dark-raspberry: hsl(332, 51%, 32%);
+  }
+
+html {
+    background-color: var(--eggshell);
+    font-family: "Outfit";
+    font-size: 16px;
+    color: var(--dark-charcoal);
+}
+
+body {
+    max-width: 650px;
+    background-color: var(--white);
+    padding: 2.5em;
+    border-radius: 20px;
+    margin: 7em auto;
+}
+
+img {
+    border-radius: 15px;
+    width: 100%;
+}
+
+h1, h2 {
+    font-family: "Young Serif";
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 1.75em;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+.description {
+    margin-bottom: 2em;
+}
+
+.section-head {
+    color: var(--nutmeg);
+}
+
+.prep {
+    background-color: var(--rose-white);
+    border-radius: 10px;
+    padding: 1.5em 1.5em 0.75em 1.5em;
+    color: var(--dark-raspberry);
+    li {
+        color: var(--wenge-brown);
+    }
+    li::marker {
+        color: var(--dark-raspberry);
+        font-weight: 400;
+    }
+}
+
+.nutrition-fact {
+    display: inline-block;
+    width: 100%;
+}
+
+.label {
+    float: left;
+    margin: 0;
+    padding-left: 2em;
+}
+
+.value {
+    width: 50%;
+    float: right;
+    text-align: left;
+    color: var(--nutmeg);
+    font-weight: 600;
+    margin: 0;
+}
+
+.nutrition hr {
+    margin-top: 0.5em;
+    margin-bottom: 1.1em;
+    height: 1px;
+    border: none;
+    background-color: var(--light-grey);
+}
+
+.nutrition-desc {
+    margin-bottom: 2em;
+}
+
+.divider {
+    background-color: var(--light-grey);
+    height: 2px;
+    border: none;
+    margin-top: 2em;
+}
+
+.description, .nutrition-desc {
+    line-height: 1.5em;
+}
+
+li {
+    margin-bottom: 1rem;
+    padding-left: 0.75em;
+    line-height: 1em;
+}
+
+li::marker {
+    color: var(--nutmeg);
+    font-weight: 600;
+    padding-left: 1em;
+}
+
+ul, ol {
+    padding-left: 1.5em;
+}
+
+ol li {
+    line-height: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.attribution {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+@media only screen and (max-width: 375px) {   
+    body {
+        min-width: 320px;
+        max-width: 375px;
+        margin-top: 0px;
+        margin-bottom: 0;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        padding: 2em;
+    }
+
+    img {
+        min-width: calc(100% + 4em);
+        border-radius: 0;
+        margin-left: -2em;
+        margin-top: -2em;
+        margin-right: -2em;
+    }
+
+    .prep {
+        padding: 1.5em 1.5em 0.75em 1.5em;
+        li {
+            line-height: 1.5em;
+        }
+    }
+}
